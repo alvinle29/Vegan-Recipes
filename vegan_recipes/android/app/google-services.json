@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "738007705129",
+    "project_id": "my-firebase-proj-9703f",
+    "storage_bucket": "my-firebase-proj-9703f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738007705129:android:fcf578f945abd84e915e38",
+        "android_client_info": {
+          "package_name": "com.example.vegan_recipes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738007705129-ehcf8i59nq15rqj561ccg60vik3fevis.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWdj_4MCPR518DUe9QztWIvblzsak_hlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738007705129-ehcf8i59nq15rqj561ccg60vik3fevis.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
