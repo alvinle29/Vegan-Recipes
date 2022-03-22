@@ -4,8 +4,7 @@ import 'package:vegan_recipes/Model/RecipeMode.dart';
 import 'package:http/http.dart' as http;
 
 class recipeAPI {
-  static Future<List<RecipeModel>> getRecipe() async{
-
+  static Future<List<RecipeModel>> getRecipe() async {
     var rand = Random();
     String k = rand.nextInt(200).toString();
     print(k);

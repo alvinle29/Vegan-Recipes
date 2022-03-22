@@ -82,7 +82,7 @@ class Page1 extends StatelessWidget {
     return SafeArea(
       bottom: false,
       child: DefaultTabController(
-        length: 3,
+        length: 1,
         initialIndex: 0,
         child: Column(
           children: [
@@ -95,12 +95,6 @@ class Page1 extends StatelessWidget {
               tabs: [
                 Tab(
                   text: "New Recipes".toUpperCase(),
-                ),
-                Tab(
-                  text: "Favourites".toUpperCase(),
-                ),
-                Tab(
-                  text: "Categories".toUpperCase(),
                 ),
               ],
               labelColor: Colors.black,
@@ -123,27 +117,13 @@ class Page1 extends StatelessWidget {
               child: TabBarView(
                 children: <Widget>[
                   NewRecipe(),
-                  Container(
-                    child: Center(
-                      child: Text(
-                        'Favourite Section',
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Center(
-                      child: Text(
-                        'Cetegories',
-                      ),
-                    ),
-                  ),
                 ],
               ),
             )
           ],
         ),
       )
-    );// This trailing comma makes auto-formatting nicer for build methods.
+    );
   }
 }
 class Page2 extends StatelessWidget {
@@ -157,42 +137,3 @@ class Page2 extends StatelessWidget {
     }
 }
 
-/*@override
-  State<Page2> createState() => _Page2State();
-}
-
-class _Page2State extends State<Page2> {
-    late List<RecipeModel> _recipes;
-
-    bool _isLoading = true;
-
-    @override
-    void initState() {
-      super.initState();
-      getRecipes();
-    }
-
-    Future<void> getRecipes() async {
-      _recipes = await recipeAPI.getRecipe2();
-      setState(() {
-        _isLoading = false;
-      });
-    }*/
-
-/*@override
-    Widget build(BuildContext context) {
-      return Scaffold(
-          body: _isLoading
-              ? Center(child: CircularProgressIndicator())
-              : ListView.builder(
-            itemCount: _recipes.length,
-            itemBuilder: (context, index) {
-              return RecipeCards(
-                  title: _recipes[index].name,
-                  cookTime: _recipes[index].totalTime,
-                  rating: _recipes[index].rating.toString(),
-                  thumbnailURL: _recipes[index].images);
-            },
-          ));
-    }
-}*/

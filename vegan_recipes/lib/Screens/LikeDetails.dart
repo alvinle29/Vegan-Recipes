@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
@@ -6,7 +5,6 @@ import 'package:url_launcher/link.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 import 'package:vegan_recipes/NewRecipe.dart';
-
 
 class LikeDetails extends StatelessWidget {
   final Fav fav;
@@ -308,7 +306,8 @@ class Links extends StatelessWidget {
                       fontSize: 20,
                       color: Colors.blue,
                       decoration: TextDecoration.underline,
-                    )),
+                    )
+                ),
               )
           )
       ),

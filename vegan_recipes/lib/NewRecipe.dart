@@ -14,7 +14,6 @@ class _NewRecipeState extends State<NewRecipe> {
   late List<RecipeModel> _recipes;
 
   bool _isLoading = true;
-
   ScrollController scrollController = ScrollController();
   bool showbtn = false;
 
@@ -50,15 +49,15 @@ class _NewRecipeState extends State<NewRecipe> {
   Widget build(BuildContext context) {
     return Scaffold(
         floatingActionButton: AnimatedOpacity(
-          duration: Duration(milliseconds: 1000),  //show/hide animation
-          opacity: showbtn?1.0:0.0, //set obacity to 1 on visible, or hide
+          duration: Duration(milliseconds: 1000),
+          opacity: showbtn?1.0:0.0,
           child: FloatingActionButton(
             mini: true,
             onPressed: () {
-              scrollController.animateTo( //go to top of scroll
-                  0,  //scroll offset to go
-                  duration: Duration(milliseconds: 500), //duration of scroll
-                  curve:Curves.fastOutSlowIn //scroll type
+              scrollController.animateTo(
+                  0,
+                  duration: Duration(milliseconds: 500),
+                  curve:Curves.fastOutSlowIn
               );
             },
             child: Icon(Icons.arrow_upward,color: Colors.black,),
@@ -68,11 +67,9 @@ class _NewRecipeState extends State<NewRecipe> {
         body: _isLoading
             ? Center(child: CircularProgressIndicator())
             : RefreshIndicator(
-                // trigger the _loadData function when the user pulls down
                 onRefresh: getRecipes,
-                // Render the todos
                 child: SingleChildScrollView(
-                  controller: scrollController, //set controller
+                  controller: scrollController,
                   child: Column(
                     children: [
                       SizedBox(
@@ -106,7 +103,8 @@ class _NewRecipeState extends State<NewRecipe> {
                     ],
                   ),
                 ),
-              ));
+              )
+    );
   }
 }
 
